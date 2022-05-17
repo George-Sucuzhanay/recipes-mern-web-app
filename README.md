@@ -1,4 +1,5 @@
-![](./client/src/assets/logo.png)
+<img src="./client/src/assets/logo.png" width= 100px>
+
 
 # 🧑‍🍳 Recipe CRUD App 🧑‍🍳
 
