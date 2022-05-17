@@ -1,4 +1,4 @@
-![](./client/src/assets/logo.svg)
+![](./client/src/assets/logo.png)
 
 # 🧑‍🍳 Recipe CRUD App 🧑‍🍳
 
@@ -15,7 +15,7 @@ XYZ is a intuitive web application that organizes your favorite recipes. You can
 <div>
 <img src="./client/src/assets/home.png" width= 400px>
 <img src="/client/src/assets/update.png" width= 400px>
-<img src="/client/src/assets/.png" width= 400px>
+<img src="/client/src/assets/viewone.png" width= 400px>
 </div>
 
 [Figma UX Design](https://www.figma.com/file/nVNAco9PUDnng4ziMvbCRs/Recipes-MERN-CRUD-APP?node-id=0%3A1)
