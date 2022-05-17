@@ -1,12 +1,21 @@
 {
   "name": "mern-recipes-app-phase3",
   "version": "1.0.0",
-  "description": "![](./client/src/assets/logo.svg)",
-  "main": "index.js",
+  "description": "<img src=\"./client/src/assets/logo.png\" width= 100px>",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/George-Sucuzhanay/recipes-mern-web-app.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/George-Sucuzhanay/recipes-mern-web-app/issues"
+  },
+  "homepage": "https://github.com/George-Sucuzhanay/recipes-mern-web-app#readme"
 }
