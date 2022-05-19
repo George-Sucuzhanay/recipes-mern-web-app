@@ -1,17 +1,22 @@
-import './App.css';
-import { Button } from '@mui/material';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import Home from './componets/routes/Home';
+import ListRecipes from "./componets/routes/ListRecipes"
+import CreateRecipe from "./componets/routes/CreateRecipe"
+
+
 
 function App() {
   return (
     <div className="App">
-      <div className='bg-black text-white text-3x1'>
-      Code Test
-      </div>
-      <div>
-          <Button variant="text" className="bg-sky-500">Text</Button>
-          <Button variant="contained">Contained</Button>
-          <Button variant="outlined">Outlined</Button>
-      </div>
+      
+      <Routes>
+
+    <Route path='/' element={<Home />} />
+    <Route path='/recipes' element={<ListRecipes />} />
+    <Route path='/recipes/create' element={<CreateRecipe />} />
+
+
+      </Routes>
     </div>
   );
 }
