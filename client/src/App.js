@@ -14,6 +14,7 @@ function App() {
   
   return (
     <div className="App">
+
       <h3>{location.state ? location.state.message: null }</h3>
 
       <Routes>
@@ -32,6 +33,7 @@ function App() {
           <Button variant="contained">Contained</Button>
           <Button variant="outlined">Outlined</Button>
       </div>
+
     </div>
   );
 }
