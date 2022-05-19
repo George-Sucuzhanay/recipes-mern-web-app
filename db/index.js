@@ -2,7 +2,7 @@ const moongoose = require("mongoose")
 const express = require("express")
 const { default: mongoose } = require("mongoose")
 
-let MONGODB_URL = process.env.PROD_MONGODB || process.env.MONGODB_URL || "YOUR DATABASE LINK HERE"
+let MONGODB_URL = process.env.PROD_MONGODB || process.env.MONGODB_URL || 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox.z7zi6.mongodb.net/?retryWrites=true&w=majority'
 
 mongoose.connect(MONGODB_URL, 
     {
