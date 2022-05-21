@@ -45,7 +45,7 @@ export default function SideNav () {
                
 
                  <UserBox className='lg:hidden' onClick={(e)=>setOpen(true)}>
-                 <MenuIcon size="large" sx={{width:30,height:30,display:{sm:"block",md:"none"}}} />
+                 <MenuIcon size="large"/>
                 </UserBox> 
 
             </StyledToolbar>
@@ -66,7 +66,7 @@ export default function SideNav () {
       >
         <MenuItem ><NavLink to="/">Home</NavLink></MenuItem>
         <MenuItem ><NavLink to="/recipes">Recipes</NavLink></MenuItem>
-        <MenuItem ><NavLink to="/recipes/create">Add Recipes</NavLink></MenuItem>
+        <MenuItem ><NavLink to="/create-recipe">Add Recipes</NavLink></MenuItem>
        
       </Menu>
       </Box>
@@ -96,7 +96,7 @@ export default function SideNav () {
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
-                    <NavLink to="/">
+                    <NavLink to="/create-recipe">
                     <ListItemButton className='pr-20' >
                     <ListItemText primary="Add Recipe" />
                     </ListItemButton>
