@@ -2,7 +2,8 @@ const moongoose = require("mongoose")
 const express = require("express")
 const { default: mongoose } = require("mongoose")
 
-let MONGODB_URL = process.env.PROD_MONGODB || process.env.MONGODB_URL || 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox.z7zi6.mongodb.net/?retryWrites=true&w=majority'
+let MONGODB_URL = process.env.PROD_MONGODB || process.env.MONGODB_URL || "mongodb://127.0.0.1:27017/recipieDB"
+
 
 mongoose.connect(MONGODB_URL, 
     {
