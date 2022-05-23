@@ -6,7 +6,7 @@ import RecipeForm from '../shared/RecipeForm';
 
 function RecipeCreate() {
   const navigate = useNavigate();
-  const [item, setItem] = useState({
+  const [recipe, setRecipe] = useState({
     title: '',
     ingredients: [''],
     cook_time: '',
@@ -14,15 +14,15 @@ function RecipeCreate() {
     directions: [''],
     Rating: ''
   })
-  const [createdItem, setCreatedItem] = useState(null)
+  const [createRecipe, setCreateRecipe] = useState(null)
 
   const handleChange = (event) => {
     //created a placeholder grabbing the value from the user input form
     const updatedField = { [event.target.name] : event.target.value }
     //assigned the empty state with the updatedField into one object
-    const editedItem = Object.assign(item, updatedField)
+    const editedRecipe = Object.assign(recipe, updatedField)
     //assigned the new object to be updated to the state
-    setItem(editedItem)
+    setRecipe(editedRecipe)
   }
   
   const handleSubmit = (event) => {
@@ -33,21 +33,21 @@ function RecipeCreate() {
     axios({
       url: `http://localhost:3000/api/recipes`,
       method: 'POST',
-      data: item
-    }).then(res => setCreatedItem(res.data.item)).catch(console.error)
+      data: recipe
+    }).then(res => setCreatedRecipe(res.data.recipe)).catch(console.error)
 
   }
 
   useEffect(() => {
-    if (createdItem) {
+    if (createdRecipe) {
       return navigate(`/recipes`)
     }
-  }, [createdItem, navigate])
+  }, [createdRecipe, navigate])
 
   return (
     <Layout>
       <RecipeForm
-        item={item}
+        recipe={recipe}
         handleChange={(e) => handleChange(e)}
         handleSubmit={(e) => handleSubmit(e)}
         cancelPath='/'
