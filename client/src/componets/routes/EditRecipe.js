@@ -57,4 +57,4 @@ function EditRecipe(){
          </Layout>
       )
     }
-export default ItemEdit
+export default EditRecipe
