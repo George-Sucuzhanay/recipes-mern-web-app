@@ -24,7 +24,7 @@ const [items, setItems] = useState([])
     fetchData()
   }, [])
 
-  const itemsData = items.map((item) => {
+  const recipesData = items.map((item) => {
     return <li key={item._id}>
       <NavLink to={`/items/${item._id}`} >{item.title}</NavLink>
     </li>
@@ -37,7 +37,7 @@ const [items, setItems] = useState([])
             </div>
             
             <Box className="flex flex-wrap justify-evenly gap-y-4">
-            {/*here is where to put the results to display*/}
+            {recipesData}
             </Box>
         </Layout>
     )
