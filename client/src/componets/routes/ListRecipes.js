@@ -10,12 +10,12 @@ export default function ListRecipes (){
 //go to RecipeCard to see what to name the props
 //example would be name={something} 
 
-const [items, setItems] = useState([])
+const [recipes, setRecipes] = useState([])
 
   const fetchData = async () => {
     try {
-      const response = await axios('http://localhost:3000/api/items')
-      setItems(response.data.items)
+      const response = await axios('http://localhost:3000/api/recipes')
+      setRecipes(response.data.recipes)
 
     } catch (error) {
       console.error(error)
@@ -26,9 +26,9 @@ const [items, setItems] = useState([])
     fetchData()
   }, [])
 
-  const recipesData = items.map((item) => {
-    return <li key={item._id}>
-      <NavLink to={`/items/${item._id}`} >{item.title}</NavLink>
+  const recipesData = recipes.map((recipe) => {
+    return <li key={recipe._id}>
+      <NavLink to={`/recipes/${recipe._id}`} >{recipe.title}</NavLink>
     </li>
   })
   
