@@ -4,6 +4,7 @@ const { default: mongoose } = require("mongoose")
 
 let MONGODB_URL = process.env.PROD_MONGODB || process.env.MONGODB_URL || "mongodb://127.0.0.1:27017/recipieDB"
 
+
 mongoose.connect(MONGODB_URL, 
     {
         useUnifiedTopology: true, 
