@@ -4,7 +4,7 @@ import axios from 'axios';
 import Layout from '../shared/Layout';
 import RecipeForm from '../shared/RecipeForm';
 
-function RecipeCreate() {
+function CreateRecipe() {
   const navigate = useNavigate();
   const [item, setItem] = useState({
     title: '',
@@ -42,6 +42,9 @@ function RecipeCreate() {
 
   return (
     <Layout>
+        <div>
+            <h1>Create a Recipe</h1>
+        </div>
       <RecipeForm
         item={item}
         handleChange={(e) => handleChange(e)}
@@ -53,5 +56,5 @@ function RecipeCreate() {
   )
 }
 
-export default RecipeCreate
+export default CreateRecipe
 
