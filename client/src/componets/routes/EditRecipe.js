@@ -53,7 +53,7 @@ function EditRecipe(){
      return(
          <Layout>
              <RecipeForm
-               item={item}
+               recipe={recipe}
                handleChange={(e) => handleChange(e)}
                handleSubmit={(e) => handleSubmit(e)}
                cancelPath={`/recipes/${id}`}
