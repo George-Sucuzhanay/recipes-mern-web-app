@@ -84,7 +84,7 @@ useEffect(()=>{
         </div>
 
         <div className="flex justify-evenly ">
-          <h3> Cook Time: {recipe.cook_time} </h3>
+          <h3> Cook Time: {recipe.cook_time}min </h3>
           <Typography className="flex" component="legend">Rating: <Rating name="read-only" value={value} readOnly  /> </Typography>
           
           
