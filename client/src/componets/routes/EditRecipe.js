@@ -10,11 +10,11 @@ function EditRecipe(){
     const { id } = useParams()  //get the id from the current object to update
     const [item, setItem] = useState({
         title: '',
-        Rating: '',
+        ingredients: '',
         cook_time: '',
         image: '',
-        ingredients: '',
-        directions: ''
+        directions: '',
+        Rating: ''
     })
     const [updated, setUpdated] = useState(false)
     useEffect(() => {

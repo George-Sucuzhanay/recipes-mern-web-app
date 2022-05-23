@@ -8,11 +8,11 @@ function RecipeCreate() {
   const navigate = useNavigate();
   const [item, setItem] = useState({
     title: '',
-    Rating: '',
+    ingredients: '',
     cook_time: '',
     image: '',
-    ingredients: '',
-    directions: ''
+    directions: '',
+    Rating: ''
   })
   const [createdItem, setCreatedItem] = useState(null)
 
