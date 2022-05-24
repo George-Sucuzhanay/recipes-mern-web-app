@@ -25,6 +25,7 @@ function CreateRecipe() {
     setRecipe(editedRecipe)
   }
   
+  
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -60,5 +61,5 @@ function CreateRecipe() {
   )
 }
 
-export default CreateRecipe
+export default CreateRecipe;
 

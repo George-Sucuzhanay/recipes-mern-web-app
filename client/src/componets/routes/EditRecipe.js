@@ -19,21 +19,21 @@ function EditRecipe(){
     const [updated, setUpdated] = useState(false)
     useEffect(() => {
         const fetchData = async () => {
-       try {
-           const response = await axios(`http://localhost:3000/api/recipes/${id}`)
-           console.log(response)
-           setRecipe(response.data)
-       } catch (error) {
-           console.log(error)
-       }
+        try {
+            const response = await axios(`http://localhost:3000/api/recipes/${id}`)
+            console.log(response)
+            setRecipe(response.data.recipe)
+        } catch (error) {
+            console.log(error)
+        }
       }
       fetchData()
-    }, [])
+    }, [id])
     const handleChange = (event) => {
         //created a placeholder grabbing the value from the user input form
-        const updatedField = { [event.target.name] : event.target.value }
+        // const updatedField = { [event.target.name] : event.target.value }
         //assigned the empty state with the updatedField into one object
-        const editedRecipe = Object.assign(recipe, updatedField)
+        const editedRecipe = { ...recipe, [event.target.name]: event.target.value}
         //assigned the new object to be updated to the state
         setRecipe(editedRecipe)
     }
