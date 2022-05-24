@@ -1,12 +1,37 @@
 import { Box } from "@mui/material";
 import Layout from "../shared/Layout";
-
+import { useState, useEffect } from 'react';
+import { NavLink } from "react-router-dom";
+import axios from 'axios';
 
 export default function ListRecipes (){
   
 //pass the results of the array it RecipeCard
 //go to RecipeCard to see what to name the props
 //example would be name={something} 
+
+const [recipes, setRecipes] = useState([])
+
+  const fetchData = async () => {
+    try {
+      const response = await axios('http://localhost:3000/api/recipes')
+      setRecipes(response.data.recipes)
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const recipesData = recipes.map((recipe) => {
+    return <li key={recipe._id}>
+      <NavLink to={`/recipes/${recipe._id}`} >{recipe.title}</NavLink>
+    </li>
+  })
+  
     return(
         <Layout>
             <div className="mb-20">
@@ -14,7 +39,7 @@ export default function ListRecipes (){
             </div>
             
             <Box className="flex flex-wrap justify-evenly gap-y-4">
-            {/*here is where to put the results to display*/}
+            {recipesData}
             </Box>
         </Layout>
     )
