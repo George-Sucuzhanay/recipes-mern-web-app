@@ -1,52 +1,120 @@
 // working on RecipeForm by passing in props down
+import { CancelScheduleSend, SaveAlt, SendAndArchive } from '@mui/icons-material';
+import { Box, TextField, Button, ListItemIcon } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 px-10 mb-10">
 
-            <label>Title: </label>
+            {/* <label>Title: </label>
             <input
             placeholder="Smashed Potatoes"
             defaultValue={recipe.title}
             name="title"
-            onChange={(e) => handleChange(e)} />
+            onChange={(e) => handleChange(e)} /> */}
+             <TextField
+                id="outlined-textarea"
+                label="Title"
+                placeholder="Smashed Potatoes"
+                multiline
+                name="title"
+                className="w-96"
+                defaultValue={recipe.title}
+                onChange={(e) => handleChange(e)}
+                variant="filled"
+            />
 
-            <label>Cook Time: </label>
+            {/* <label>Cook Time: </label>
             <input
             placeholder="30 mins"
             defaultValue={recipe.cook_time}
             name="cook_time"
-            onChange={(e) => handleChange(e)} />
+            onChange={(e) => handleChange(e)} /> */}
+             <TextField
+                id="outlined-textarea"
+                label="Cook Time"
+                placeholder="30 mins"
+                multiline
+                name="cook_time"
+                className="w-96"
+                defaultValue={recipe.cook_time}
+                onChange={(e) => handleChange(e)}
+                variant="filled"
+            />
 
-            <label>Rating: </label>
+            <TextField
+                id="outlined-textarea"
+                label="ImageURL"
+                placeholder="image url"
+                multiline
+                name="image"
+                className="w-96"
+                defaultValue={recipe.image}
+                onChange={(e) => handleChange(e)}
+                variant="filled"
+            />
+
+            {/* <label>Rating: </label>
             <input
             placeholder="5"
             defaultValue={recipe.Rating}
             name="Rating"
-            onChange={(e) => handleChange(e)} />
+            onChange={(e) => handleChange(e)} /> */}
+             <TextField
+                id="outlined-textarea"
+                label="Rating"
+                placeholder="5"
+                multiline
+                name="Rating"
+                className="w-96"
+                defaultValue={recipe.Rating}
+                onChange={(e) => handleChange(e)}
+                variant="filled"
+            />
 
-            <label>Ingredients: </label>
+            {/* <label>Ingredients: </label>
             <input
             placeholder="Ingredients"
             defaultValue={recipe.ingredients}
             name="ingredients"
-            onChange={(e) => handleChange(e)} />
+            onChange={(e) => handleChange(e)} /> */}
+             <TextField
+                id="outlined-textarea"
+                label="Ingredients"
+                placeholder="Ingredients"
+                multiline
+                name="ingredients"
+                className="w-96"
+                defaultValue={recipe.ingredients}
+                onChange={(e) => handleChange(e)}
+            />
 
-            <label>Directions: </label>
+            {/* <label>Directions: </label>
             <input
             placeholder="Directions"
             defaultValue={recipe.directions}
             name="directions"
-            onChange={(e) => handleChange(e)} />
+            onChange={(e) => handleChange(e)} /> */}
+             <TextField
+                id="outlined-textarea"
+                label="Directions"
+                placeholder="Directions"
+                multiline
+                name="directions"
+                className="w-96"
+                defaultValue={recipe.directions}
+                onChange={(e) => handleChange(e)}
+            />
 
-
-            <button type="submit">Submit</button>
+            <Box className="flex justify-evenly lg:col-span-2">
+            <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-700 item-center" type="submit">Submit</Button>
 
             <Link to={cancelPath}>
-                <button>Cancel</button>
+                <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-700" >Cancel</Button>
             </Link>
+            </Box>
             
         </form>
     )

@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia, Typography, Rating } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 
@@ -6,10 +6,11 @@ import { useNavigate } from "react-router-dom";
 export default function RecipeCard ({id,rating,title,image,cooktime}){
     const navigate = useNavigate();
     return(
-        <Card  sx={{ maxWidth: 345 }} onClick={() => navigate(`/recipes/${id}`)}>
+      
+        <Card className="max-w-5xl"  onClick={() => navigate(`/recipes/${id}`)}>
       <CardActionArea>
         <CardMedia
-          className="max-h-56"
+          className="max-h-56 "
           component="img"
           image={image}
           alt="green iguana"
@@ -18,9 +19,12 @@ export default function RecipeCard ({id,rating,title,image,cooktime}){
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
+          <div className=" ">
           <Typography className="text-white" variant="body2" color="text.secondary">
-            Cook Time: {cooktime}
+            Cook Time: {cooktime}  
           </Typography>
+          <Typography className="flex" component="legend"> Rating: <Rating name="read-only" value={rating} readOnly  /> </Typography>
+          </div>
         </CardContent>
       </CardActionArea>
     </Card>

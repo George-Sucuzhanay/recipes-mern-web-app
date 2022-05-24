@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, ImageList } from "@mui/material";
 import Layout from "../shared/Layout";
 import { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
@@ -46,9 +46,11 @@ const [recipes, setRecipes] = useState([])
             <h1 className=" pt-5 text-3xl font-bold flex justify-center">show all recipes</h1>
             </div>
             
-            <Box className="flex flex-wrap justify-evenly gap-y-4">
+            <Box className="flex flex-wrap justify-center gap-4 mb-10 ">
             {recipesData}
             </Box>
+            
+
         </Layout>
     )
 }

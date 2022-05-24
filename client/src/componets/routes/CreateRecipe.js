@@ -9,10 +9,10 @@ function CreateRecipe() {
   const [recipe, setRecipe] = useState({
     title: '',
     ingredients: [''],
-    cook_time: '',
+    cook_time: "",
     image: '',
     directions: [''],
-    Rating: ''
+    Rating: ""
   })
   const [createRecipe, setCreateRecipe] = useState(null)
 
@@ -47,15 +47,17 @@ function CreateRecipe() {
 
   return (
     <Layout>
-        <div>
+        <div className="flex justify-center my-10 text-5xl">
             <h1>Create a Recipe</h1>
         </div>
+        <div>
       <RecipeForm
         recipe={recipe}
         handleChange={(e) => handleChange(e)}
         handleSubmit={(e) => handleSubmit(e)}
         cancelPath='/'
       />
+      </div>
     </Layout>
 
   )

@@ -2,6 +2,7 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
 import { useState } from 'react';
 import {NavLink} from "react-router-dom"
 import MenuIcon from '@mui/icons-material/Menu';
+import { AddCircle, Home, MenuBook } from '@mui/icons-material';
 
 const StyledToolbar = styled(Toolbar)({
     display: "flex",
@@ -32,7 +33,7 @@ export default function SideNav () {
     return(
         <>
         {/* MObile View */}
-        <Box className='bg-amber-100 lg:hidden'>
+        <Box className='bg-violet-700 text-white lg:hidden'>
         <StyledToolbar  > 
        
                  {/* <Toolbar variant="h6" sx={{display:{xs:"none",sm:"block"}}}> LAMA DEV </Toolbar> 
@@ -64,9 +65,9 @@ export default function SideNav () {
           horizontal: 'left',
         }}
       >
-        <MenuItem ><NavLink to="/">Home</NavLink></MenuItem>
-        <MenuItem ><NavLink to="/recipes">Recipes</NavLink></MenuItem>
-        <MenuItem ><NavLink to="create-recipe">Add Recipes</NavLink></MenuItem>
+        <MenuItem className="hover:bg-cyan-400" ><NavLink to="/">Home</NavLink></MenuItem>
+        <MenuItem className="hover:bg-cyan-400" ><NavLink to="/recipes">Recipes</NavLink></MenuItem>
+        <MenuItem className="hover:bg-cyan-400" ><NavLink to="/create-recipe">Add Recipes</NavLink></MenuItem>
        
       </Menu>
       </Box>
@@ -84,13 +85,19 @@ export default function SideNav () {
                 <ListItem disablePadding>
                 <NavLink to="/">
                     <ListItemButton className='pr-20 hover:bg-cyan-400' >
+                    <ListItemIcon>
+                        <Home />
+                    </ListItemIcon>
                     <ListItemText primary="Homepage" />
                     </ListItemButton>
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
                 <NavLink to="/recipes">
-                    <ListItemButton className='pr-24 hover:bg-cyan-400'>                    
+                    <ListItemButton className='pr-24 hover:bg-cyan-400'>     
+                    <ListItemIcon>
+                        <MenuBook />
+                    </ListItemIcon>               
                     <ListItemText primary="Recipes" />                    
                     </ListItemButton>
                     </NavLink>
@@ -98,6 +105,9 @@ export default function SideNav () {
                 <ListItem disablePadding>
                     <NavLink to="/create-recipe">
                     <ListItemButton className='pr-20 hover:bg-cyan-400' >
+                    <ListItemIcon>
+                        <AddCircle />
+                    </ListItemIcon>
                     <ListItemText primary="Add Recipe" />
                     </ListItemButton>
                     </NavLink>
