@@ -34,15 +34,15 @@ function CreateRecipe() {
       url: `http://localhost:3000/api/recipes`,
       method: 'POST',
       data: recipe
-    }).then(res => setCreatedRecipe(res.data.recipe)).catch(console.error)
+    }).then(res => setCreateRecipe(res.data.recipe)).catch(console.error)
 
   }
 
   useEffect(() => {
-    if (createdRecipe) {
+    if (createRecipe) {
       return navigate(`/recipes`)
     }
-  }, [createdRecipe, navigate])
+  }, [createRecipe, navigate])
 
   return (
     <Layout>
