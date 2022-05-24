@@ -11,10 +11,10 @@ function EditRecipe(){
     const [recipe, setRecipe] = useState({
         title: '',
         ingredients: [''],
-        cook_time: '',
+        cook_time: 0,
         image: '',
         directions: [''],
-        Rating: ''
+        Rating: 0
     })
     const [updated, setUpdated] = useState(false)
     useEffect(() => {
