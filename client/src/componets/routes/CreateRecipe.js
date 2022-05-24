@@ -25,6 +25,7 @@ function CreateRecipe() {
     setRecipe(editedRecipe)
   }
   
+  
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -34,7 +35,7 @@ function CreateRecipe() {
       url: `http://localhost:3000/api/recipes`,
       method: 'POST',
       data: recipe
-    }).then(res =>  setCreateRecipe(res.data.recipe)).catch(console.error)
+    }).then(res => setCreateRecipe(res.data.recipe)).catch(console.error)
 
   }
 
@@ -60,5 +61,5 @@ function CreateRecipe() {
   )
 }
 
-export default CreateRecipe
+export default CreateRecipe;
 
