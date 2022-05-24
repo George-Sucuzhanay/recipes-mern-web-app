@@ -66,7 +66,7 @@ export default function SideNav () {
       >
         <MenuItem ><NavLink to="/">Home</NavLink></MenuItem>
         <MenuItem ><NavLink to="/recipes">Recipes</NavLink></MenuItem>
-        <MenuItem ><NavLink to="/create-recipe">Add Recipes</NavLink></MenuItem>
+        <MenuItem ><NavLink to="create-recipe">Add Recipes</NavLink></MenuItem>
        
       </Menu>
       </Box>
@@ -83,21 +83,21 @@ export default function SideNav () {
               
                 <ListItem disablePadding>
                 <NavLink to="/">
-                    <ListItemButton className='pr-20' >
+                    <ListItemButton className='pr-20 hover:bg-cyan-400' >
                     <ListItemText primary="Homepage" />
                     </ListItemButton>
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
                 <NavLink to="/recipes">
-                    <ListItemButton className='pr-24 '>                    
+                    <ListItemButton className='pr-24 hover:bg-cyan-400'>                    
                     <ListItemText primary="Recipes" />                    
                     </ListItemButton>
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
                     <NavLink to="/create-recipe">
-                    <ListItemButton className='pr-20' >
+                    <ListItemButton className='pr-20 hover:bg-cyan-400' >
                     <ListItemText primary="Add Recipe" />
                     </ListItemButton>
                     </NavLink>

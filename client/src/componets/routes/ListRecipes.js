@@ -3,6 +3,7 @@ import Layout from "../shared/Layout";
 import { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import axios from 'axios';
+import RecipeCard from "../shared/RecipeCard";
 
 export default function ListRecipes (){
   
@@ -27,9 +28,16 @@ const [recipes, setRecipes] = useState([])
   }, [])
 
   const recipesData = recipes.map((recipe) => {
-    return <li key={recipe._id}>
-      <NavLink to={`/recipes/${recipe._id}`} >{recipe.title}</NavLink>
-    </li>
+    return  (
+     <RecipeCard 
+    id={recipe._id}
+    rating={recipe.Rating}
+    title={recipe.title}
+    image={recipe.image}
+    cooktime={recipe.cook_time}
+    />
+    )
+
   })
   
     return(
