@@ -2,7 +2,7 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText,  Menu,
 import { useState } from 'react';
 import {NavLink} from "react-router-dom"
 import MenuIcon from '@mui/icons-material/Menu';
-import { AddCircle, Home, MenuBook } from '@mui/icons-material';
+import { AddCircle, Home, MenuBook, Search } from '@mui/icons-material';
 
 
 const StyledToolbar = styled(Toolbar)({
@@ -64,6 +64,7 @@ export default function SideNav () {
         <MenuItem className="hover:bg-cyan-400" ><NavLink to="/">Home</NavLink></MenuItem>
         <MenuItem className="hover:bg-cyan-400" ><NavLink to="/recipes">Recipes</NavLink></MenuItem>
         <MenuItem className="hover:bg-cyan-400" ><NavLink to="/create-recipe">Add Recipes</NavLink></MenuItem>
+        <MenuItem className="hover:bg-cyan-400" ><NavLink to="/search">Search</NavLink></MenuItem>
        
       </Menu>
       </Box>
@@ -110,6 +111,16 @@ export default function SideNav () {
                         <AddCircle />
                     </ListItemIcon>
                     <ListItemText primary="Add Recipe" />
+                    </ListItemButton>
+                    </NavLink>
+                </ListItem>
+                <ListItem disablePadding>
+                    <NavLink to="/search">
+                    <ListItemButton className='pr-20 hover:bg-cyan-400' >
+                    <ListItemIcon>
+                        <Search />
+                    </ListItemIcon>
+                    <ListItemText primary="search" />
                     </ListItemButton>
                     </NavLink>
                 </ListItem>

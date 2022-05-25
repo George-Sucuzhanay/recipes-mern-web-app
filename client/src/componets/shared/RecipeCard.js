@@ -7,7 +7,7 @@ export default function RecipeCard ({id,rating,title,image,cooktime}){
     const navigate = useNavigate();
     return(
       
-        <Card className="max-w-5xl"  onClick={() => navigate(`/recipes/${id}`)}>
+        <Card className="max-w-5xl transform transition-all hover:scale-90 hover:animate-pulse"  onClick={() => navigate(`/recipes/${id}`)}>
       <CardActionArea>
         <CardMedia
           className="max-h-56 "

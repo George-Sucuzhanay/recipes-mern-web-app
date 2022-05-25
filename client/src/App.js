@@ -5,6 +5,7 @@ import ShowRecipe from "./componets/routes/ShowRecipe";
 import ListRecipes from "./componets/routes/ListRecipes";
 import CreateRecipe from "./componets/routes/CreateRecipe";
 import EditRecipe from "./componets/routes/EditRecipe";
+import Search from './componets/routes/Search';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/create-recipe" element={<CreateRecipe/>}/>
         <Route path="/recipes/:id" element={<ShowRecipe/>}/>
         <Route path="/recipes/:id/edit" element={<EditRecipe/>}/>
+        <Route path="/search" element={<Search/>}/>
       </Routes>
 
     </div>
