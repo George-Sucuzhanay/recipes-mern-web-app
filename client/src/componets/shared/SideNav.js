@@ -1,8 +1,9 @@
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch, InputBase, Menu, MenuItem, styled, Toolbar, Avatar, Typography } from '@mui/material';
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText,  Menu, MenuItem, styled, Toolbar, } from '@mui/material';
 import { useState } from 'react';
 import {NavLink} from "react-router-dom"
 import MenuIcon from '@mui/icons-material/Menu';
 import { AddCircle, Home, MenuBook } from '@mui/icons-material';
+
 
 const StyledToolbar = styled(Toolbar)({
     display: "flex",
@@ -10,12 +11,7 @@ const StyledToolbar = styled(Toolbar)({
     paddingBottom:"10"
 })
 
-const Search = styled('div')(({theme})=>({
-    backgroundColor: 'white',
-    padding:"0px 10px",
-    borderRadius: theme.shape.borderRadius,
-    width: '40%'
-}))
+
 
 const UserBox = styled(Box)(({theme})=>({
     display: "flex",
@@ -77,9 +73,14 @@ export default function SideNav () {
 
         <Box flex={1} p={2} className="hidden lg:block border-r-4 "   >
             <Box position="fixed">
-                <div style={{marginBottom:20}}>
-                    <h1 className='mb-20 text-3xl font-bold flex justify-center'>Name of App</h1>
+                <div className='grid mb-10 justify-center'>
+                    
+                    <h1 className=' text-3xl font-bold flex justify-center'>Name of App</h1>
+                    <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
                 </div>
+                
+               
+
             <List >
               
                 <ListItem disablePadding>

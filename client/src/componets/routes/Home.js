@@ -84,7 +84,7 @@ useEffect(()=>{
       <img className="h-56px" src={recipe.image} />
         </div>
 
-        <div className="flex justify-evenly ">
+        <div className="flex justify-evenly pt-4 ">
           <h3> Cook Time: {recipe.cook_time}min </h3>
           <Typography className="flex" component="legend">Rating: <Rating name="read-only" value={value} readOnly  /> </Typography>
           
