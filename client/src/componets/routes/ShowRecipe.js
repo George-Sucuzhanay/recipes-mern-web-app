@@ -39,7 +39,7 @@ function ShowRecipe(){
     
       useEffect(() => {
         if (deleted) {
-          return navigate("/")
+          return navigate("/recipes")
         }
       }, [deleted, navigate])
 
