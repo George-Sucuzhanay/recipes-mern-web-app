@@ -27,9 +27,10 @@ const [recipes, setRecipes] = useState([])
     fetchData()
   }, [])
 
-  const recipesData = recipes.map((recipe) => {
+  const recipesData = recipes.map((recipe,i) => {
     return  (
      <RecipeCard 
+     key={i}
     id={recipe._id}
     rating={recipe.Rating}
     title={recipe.title}

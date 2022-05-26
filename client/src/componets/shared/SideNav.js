@@ -2,7 +2,7 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText,  Menu,
 import { useState } from 'react';
 import {NavLink} from "react-router-dom"
 import MenuIcon from '@mui/icons-material/Menu';
-import { AddCircle, Home, MenuBook, Search } from '@mui/icons-material';
+import { AddCircleOutline, Home, MenuBook, QuestionMark, Search } from '@mui/icons-material';
 
 
 const StyledToolbar = styled(Toolbar)({
@@ -73,7 +73,7 @@ export default function SideNav () {
 {/* Desktop View */}
 
         <Box flex={1} p={2} className="hidden lg:block border-r-4 "   >
-            <Box position="fixed">
+            <Box position="fixed ">
                 <div className='grid mb-10 justify-center'>
                     
                     <h1 className=' text-3xl font-bold flex justify-center'>Name of App</h1>
@@ -86,9 +86,9 @@ export default function SideNav () {
               
                 <ListItem disablePadding>
                 <NavLink to="/">
-                    <ListItemButton className='pr-20 hover:bg-cyan-400' >
+                    <ListItemButton className='pr-20 hover:bg-cyan-400/50 transform transition-all hover:scale-110' >
                     <ListItemIcon>
-                        <Home />
+                        <Home className="fill-sky-100" />
                     </ListItemIcon>
                     <ListItemText primary="Homepage" />
                     </ListItemButton>
@@ -96,9 +96,9 @@ export default function SideNav () {
                 </ListItem>
                 <ListItem disablePadding>
                 <NavLink to="/recipes">
-                    <ListItemButton className='pr-24 hover:bg-cyan-400'>     
+                    <ListItemButton className='pr-24 hover:bg-cyan-400/50 transform transition-all hover:scale-110'>     
                     <ListItemIcon>
-                        <MenuBook />
+                        <MenuBook className="fill-sky-100" />
                     </ListItemIcon>               
                     <ListItemText primary="Recipes" />                    
                     </ListItemButton>
@@ -106,9 +106,9 @@ export default function SideNav () {
                 </ListItem>
                 <ListItem disablePadding>
                     <NavLink to="/create-recipe">
-                    <ListItemButton className='pr-20 hover:bg-cyan-400' >
+                    <ListItemButton className='pr-20 hover:bg-cyan-400/50 transform transition-all hover:scale-110' >
                     <ListItemIcon>
-                        <AddCircle />
+                        <AddCircleOutline className="fill-sky-100" />
                     </ListItemIcon>
                     <ListItemText primary="Add Recipe" />
                     </ListItemButton>
@@ -116,11 +116,21 @@ export default function SideNav () {
                 </ListItem>
                 <ListItem disablePadding>
                     <NavLink to="/search">
-                    <ListItemButton className='pr-20 hover:bg-cyan-400' >
+                    <ListItemButton className='pr-20 hover:bg-cyan-400/50 transform transition-all hover:scale-110' >
                     <ListItemIcon>
-                        <Search />
+                        <Search className="fill-sky-100" />
                     </ListItemIcon>
                     <ListItemText primary="search" />
+                    </ListItemButton>
+                    </NavLink>
+                </ListItem>
+                <ListItem disablePadding>
+                    <NavLink to="/random">
+                    <ListItemButton className='pr-20 hover:bg-cyan-400/50 transform transition-all hover:scale-110' >
+                    <ListItemIcon>
+                    <QuestionMark className="fill-sky-100" />
+                    </ListItemIcon>
+                    <ListItemText primary="Random" />
                     </ListItemButton>
                     </NavLink>
                 </ListItem>

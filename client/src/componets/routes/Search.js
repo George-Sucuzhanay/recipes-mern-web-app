@@ -116,7 +116,7 @@ const display = recipes.map((recipe) => {
                     <div className="divide-y divide-black w-96 absolute">
                 {suggestions && suggestions.map((suggestion,i) => 
 
-                <div key={i} className='bg-slate-200/50 hover:shadow-lg hover:shadow-cyan-500/50 transform transition-all hover:scale-125 cursor-pointer px-2 backdrop-blur-sm z-30' onClick={() => onsuggestion(suggestion.title)  }>
+                <div key={i} className='bg-slate-200/50 hover:shadow-lg hover:bg-slate-400 lg:hover:bg-slate-200/50 lg:hover:shadow-cyan-500/75 lg:transform lg:transition-all lg:hover:scale-110 cursor-pointer px-2 backdrop-blur-sm z-30' onClick={() => onsuggestion(suggestion.title)  }>
                 {suggestion.title}</div>
 
                 )}

@@ -103,7 +103,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 placeholder="Directions"
                 multiline
                 name="directions"
-                className="w-96"
+                className="w-96 caret-cyan-400"
                 defaultValue={recipe.directions}
                 onChange={(e) => handleChange(e)}
             />

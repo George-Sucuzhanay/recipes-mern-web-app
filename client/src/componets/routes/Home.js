@@ -12,7 +12,7 @@ const [direc,setDirec] = useState([])
 const [value, setValue] = useState(0);
 const [displayed,setDisplayed] = useState({
     recipe:'hidden',
-    space:"block lg:mt-96 lg:mb-56"
+    space:"block lg:mt-96 lg:mb-56",
 })
 
 const fetchSingleData= async (id1) => {
@@ -48,7 +48,7 @@ let handleRandom = () => {
     const index = Math.floor(Math.random() * recipes.length);
         fetchSingleData(recipes[index]._id)
         setDisplayed({
-            recipe:'block',
+            recipe:'block backdrop-blur-sm',
             space:"hidden"
         })
 }
@@ -60,14 +60,14 @@ useEffect(()=>{
 
 // console.log(items)
 
- let ingredient = items.map((item) => {
+ let ingredient = items.map((item,i) => {
     return(
-        <li>{item}</li>
+        <li key={i} >{item}</li>
     )
 })
- let direction = direc.map((item) => {
+ let direction = direc.map((item,i) => {
     return(
-        <li>{item}</li>
+        <li key={i}>{item}</li>
     )
 })
 
@@ -81,7 +81,7 @@ useEffect(()=>{
             <Box className={dis.recipe}>
         <div className="flex justify-center py-5 text-xl "><h1>{recipe.title}</h1></div>
         <div className="px-10">
-      <img className="h-56px" src={recipe.image} alt="" />
+      <img className="max-h-70" src={recipe.image} />
         </div>
 
         <div className="flex justify-evenly pt-4 ">
