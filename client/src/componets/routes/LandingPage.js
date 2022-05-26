@@ -47,10 +47,10 @@ export default function LandingPage() {
                 <MenuBook className="fill-emerald-500 text-5xl" />
                 </div>
                 <div className="text-gray-800 dark:text-white text-2xl font-semibold text-center">
-                  <h2>View All Recipes</h2>
+                  <h2>View All Your Recipes</h2>
                 </div>
                 <div className="text-gray-600 dark:text-gray-300 mt-2 text-lg text-center">
-                  <p>A flexible software architecture is able to changes in usability requirements</p>
+                  <p>Want to browse your options  then this is for you</p>
                 </div>
               </div>
               </NavLink>
@@ -65,7 +65,7 @@ export default function LandingPage() {
                   <h2>Get A Random Recipe</h2>
                 </div>
                 <div className="text-gray-600 dark:text-gray-300 mt-2 text-lg text-center">
-                  <p>Don't know what to make, come get a random recipe </p>
+                  <p>Don't know what to make, come let us choose a recipe for you</p>
                 </div>
               </div>
               </NavLink>

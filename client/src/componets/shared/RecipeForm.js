@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 px-10 mb-10">
+        <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 p-10 mb-10  lg:backdrop-blur-xl lg:bg-zinc-200/80 ">
 
             {/* <label>Title: </label>
             <input
@@ -103,16 +103,16 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 placeholder="Directions"
                 multiline
                 name="directions"
-                className="w-96 caret-cyan-400"
+                className="w-96"
                 defaultValue={recipe.directions}
                 onChange={(e) => handleChange(e)}
             />
 
-            <Box className="flex justify-evenly lg:col-span-2">
-            <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-700 item-center" type="submit">Submit</Button>
+            <Box className="flex justify-evenly lg:col-span-2 ">
+            <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-500 item-center" type="submit">Submit</Button>
 
             <Link to={cancelPath}>
-                <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-700" >Cancel</Button>
+                <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-500" >Cancel</Button>
             </Link>
             </Box>
             

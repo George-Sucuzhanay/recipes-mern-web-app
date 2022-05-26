@@ -111,7 +111,7 @@ const display = recipes.map((recipe) => {
           
 
             <div >
-            <TextField className="w-96" id="standard-basic" label="Standard" type="text"  onChange={e => onChangeHandler(e.target.value)}
+            <TextField className="w-96 bg-zinc-200/80 " id="standard-basic" label="Standard" type="text"  onChange={e => onChangeHandler(e.target.value)}
             value={text} variant="filled"/>
                     <div className="divide-y divide-black w-96 absolute">
                 {suggestions && suggestions.map((suggestion,i) => 
