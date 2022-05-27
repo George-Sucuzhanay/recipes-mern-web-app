@@ -12,7 +12,7 @@ const [direc,setDirec] = useState([])
 const [value, setValue] = useState(0);
 const [displayed,setDisplayed] = useState({
     recipe:'hidden',
-    space:"block lg:mt-96 lg:mb-56",
+    space:"block h-screen",
 })
 
 const fetchSingleData= async (id1) => {
@@ -48,7 +48,7 @@ let handleRandom = () => {
     const index = Math.floor(Math.random() * recipes.length);
         fetchSingleData(recipes[index]._id)
         setDisplayed({
-            recipe:'block backdrop-blur-sm',
+            recipe:'block backdrop-blur-md',
             space:"hidden"
         })
 }
@@ -90,7 +90,7 @@ useEffect(()=>{
           
           
         </div>
-            <div className="divide-y divide-blue-600 ">
+            <div className="divide-y divide-zinc-100 ">
             <div > 
                  <div className=" flex justify-center pt-3">
                        <h1 className="text-xl font-bold">Ingredients:</h1>

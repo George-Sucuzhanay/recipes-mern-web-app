@@ -61,10 +61,11 @@ export default function SideNav () {
           horizontal: 'left',
         }}
       >
-        <MenuItem className="hover:bg-cyan-400" ><NavLink to="/">Home</NavLink></MenuItem>
-        <MenuItem className="hover:bg-cyan-400" ><NavLink to="/recipes">Recipes</NavLink></MenuItem>
-        <MenuItem className="hover:bg-cyan-400" ><NavLink to="/create-recipe">Add Recipes</NavLink></MenuItem>
-        <MenuItem className="hover:bg-cyan-400" ><NavLink to="/search">Search</NavLink></MenuItem>
+        <MenuItem className="hover:bg-violet-700/50" ><NavLink to="/">Home</NavLink></MenuItem>
+        <MenuItem className="hover:bg-violet-700/50" ><NavLink to="/recipes">Recipes</NavLink></MenuItem>
+        <MenuItem className="hover:bg-violet-700/50" ><NavLink to="/create-recipe">Add Recipes</NavLink></MenuItem>
+        <MenuItem className="hover:bg-violet-700/50" ><NavLink to="/search">Search</NavLink></MenuItem>
+        <MenuItem className="hover:bg-violet-700/50" ><NavLink to="/random">Random</NavLink></MenuItem>
        
       </Menu>
       </Box>
@@ -73,10 +74,10 @@ export default function SideNav () {
 {/* Desktop View */}
 
         <Box flex={1} p={2} className="hidden lg:block border-r-4 "   >
-            <Box position="fixed ">
+            <Box position="fixed">
                 <div className='grid mb-10 justify-center'>
                     
-                    <h1 className=' text-3xl font-bold flex justify-center'>Name of App</h1>
+                    <h1 className=' text-3xl font-bold flex justify-center pt-5'>Name of App</h1>
                     <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
                 </div>
                 
@@ -86,7 +87,7 @@ export default function SideNav () {
               
                 <ListItem disablePadding>
                 <NavLink to="/">
-                    <ListItemButton className='pr-20 hover:bg-cyan-400/50 transform transition-all hover:scale-110' >
+                    <ListItemButton className='pr-20 hover:bg-violet-700/50 transform transition-all hover:scale-110 active:bg-violet-600' >
                     <ListItemIcon>
                         <Home className="fill-sky-100" />
                     </ListItemIcon>
@@ -95,8 +96,8 @@ export default function SideNav () {
                     </NavLink>
                 </ListItem>
                 <ListItem disablePadding>
-                <NavLink to="/recipes">
-                    <ListItemButton className='pr-24 hover:bg-cyan-400/50 transform transition-all hover:scale-110'>     
+                <NavLink to="/recipes"  >
+                    <ListItemButton className='pr-24 hover:bg-violet-700/50 transform transition-all hover:scale-110 active:bg-violet-600 '>     
                     <ListItemIcon>
                         <MenuBook className="fill-sky-100" />
                     </ListItemIcon>               
@@ -106,7 +107,7 @@ export default function SideNav () {
                 </ListItem>
                 <ListItem disablePadding>
                     <NavLink to="/create-recipe">
-                    <ListItemButton className='pr-20 hover:bg-cyan-400/50 transform transition-all hover:scale-110' >
+                    <ListItemButton className='pr-20 hover:bg-violet-700/50 transform transition-all hover:scale-110 active:bg-violet-600' >
                     <ListItemIcon>
                         <AddCircleOutline className="fill-sky-100" />
                     </ListItemIcon>
@@ -116,7 +117,7 @@ export default function SideNav () {
                 </ListItem>
                 <ListItem disablePadding>
                     <NavLink to="/search">
-                    <ListItemButton className='pr-20 hover:bg-cyan-400/50 transform transition-all hover:scale-110' >
+                    <ListItemButton className='pr-20 hover:bg-violet-700/50 transform transition-all hover:scale-110 active:bg-violet-600' >
                     <ListItemIcon>
                         <Search className="fill-sky-100" />
                     </ListItemIcon>
@@ -126,7 +127,7 @@ export default function SideNav () {
                 </ListItem>
                 <ListItem disablePadding>
                     <NavLink to="/random">
-                    <ListItemButton className='pr-20 hover:bg-cyan-400/50 transform transition-all hover:scale-110' >
+                    <ListItemButton className='pr-20 hover:bg-violet-700/50 transform transition-all hover:scale-110 active:bg-violet-600' >
                     <ListItemIcon>
                     <QuestionMark className="fill-sky-100" />
                     </ListItemIcon>

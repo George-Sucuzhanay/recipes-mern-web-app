@@ -11,6 +11,7 @@ export default function Search () {
     const [recipes, setRecipes] = useState([])
     const [text,setText] = useState('')
     const [suggestions,setSuggestions] = useState([])
+    const [block , setBlock] = useState('block h-screen')
     
    
 
@@ -44,6 +45,13 @@ export default function Search () {
 const onsuggestion = (text) => {
     setText(text);
     setSuggestions([]);
+    setBlock('hidden')
+}
+
+onsubmit = () => {
+    setText(text);
+    setSuggestions([]);
+    setBlock('hidden')
 }
 
 //the 
@@ -77,7 +85,7 @@ const display = recipes.map((recipe) => {
           
           
         </div>
-            <div className="divide-y divide-blue-600 ">
+            <div className="divide-y divide-zinc-100  ">
             <div > 
                  <div className=" flex justify-center pt-3">
                        <h1 className="text-xl font-bold">Ingredients:</h1>
@@ -111,9 +119,9 @@ const display = recipes.map((recipe) => {
           
 
             <div >
-            <TextField className="w-96 bg-zinc-200/80 " id="standard-basic" label="Standard" type="text"  onChange={e => onChangeHandler(e.target.value)}
+            <TextField className=" md:w-96 bg-zinc-200/80 " id="standard-basic" label="Standard" type="text"  onChange={e => onChangeHandler(e.target.value)}
             value={text} variant="filled"/>
-                    <div className="divide-y divide-black w-96 absolute">
+                    <div className="divide-y divide-black md:w-96 absolute">
                 {suggestions && suggestions.map((suggestion,i) => 
 
                 <div key={i} className='bg-slate-200/50 hover:shadow-lg hover:bg-slate-400 lg:hover:bg-slate-200/50 lg:hover:shadow-cyan-500/75 lg:transform lg:transition-all lg:hover:scale-110 cursor-pointer px-2 backdrop-blur-sm z-30' onClick={() => onsuggestion(suggestion.title)  }>
@@ -126,6 +134,9 @@ const display = recipes.map((recipe) => {
 
             <div>
                 {display}
+            </div>
+
+            < div className={block}>
             </div>
        
     

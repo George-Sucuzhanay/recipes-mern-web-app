@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 p-10 mb-10  lg:backdrop-blur-xl lg:bg-zinc-200/80 ">
+        <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 p-10 mb-10 lg:mb-28 backdrop-blur-xl bg-zinc-200/70 mt-10 ">
 
             {/* <label>Title: </label>
             <input
@@ -14,7 +14,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
             defaultValue={recipe.title}
             name="title"
             onChange={(e) => handleChange(e)} /> */}
-             <TextField
+            <TextField
                 id="outlined-textarea"
                 label="Title"
                 placeholder="Smashed Potatoes"
