@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 export default function Footer () {
     return (
@@ -14,12 +15,10 @@ export default function Footer () {
                      
                         <div className="my-6 text-base">
                             <ul className="md:flex items-center">
-                                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">About</li>
-                                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Features</li>
-                                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Pricing</li>
-                                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Careers</li>
-                                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Help</li>
-                                <li className="cursor-pointer pt-4 lg:py-0">Privacy Policy</li>
+                            <NavLink to="/recipes"> <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Recipes</li></NavLink>
+                               <NavLink to="/random"> <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Random</li></NavLink>
+                               <NavLink to="/search"> <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Search</li></NavLink>
+                               <NavLink to="/create-recipe"> <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Add Recipe</li></NavLink>
                             </ul>
                         </div>
                         <div className="text-sm text-color mb-10 f-f-l">

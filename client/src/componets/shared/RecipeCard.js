@@ -47,7 +47,7 @@ export default function RecipeCard ({id,rating,title,image,cooktime,isLoading}){
         
      
     ) : 
-    <Typography className="text-white" variant="body2" color="text.secondary">
+    <Typography className="text-white" variant="body2" >
     Cook Time: {cooktime}  
   </Typography>
   
@@ -60,8 +60,6 @@ export default function RecipeCard ({id,rating,title,image,cooktime,isLoading}){
     ) : 
     <Typography className="flex" component="legend"> Rating: <Rating name="read-only" value={rating} readOnly  /> </Typography>
     }
-      
-        {/* <Typography className="flex" component="legend"> Rating: <Rating name="read-only" value={rating} readOnly  /> </Typography> */}
         </div>
       </CardContent>
     </CardActionArea>

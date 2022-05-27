@@ -15,6 +15,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';  
 import { Rating, Box, Grid } from '@mui/material';
 import { Typography, CardActionArea} from '@mui/material';
+import { Edit } from '@mui/icons-material';
 
 // const StyledTableCell = styled(TableCell)(({ theme }) => ({
 //   [`&.${tableCellClasses.head}`]: {
@@ -107,13 +108,20 @@ function ShowRecipe(){
             <Box className="md:grid md:grid-cols-3 md:gap-y-10 mt-20">
                 <NavLink to={`/recipes/${id}/edit`} >
 
-                <Button className="md:w-full md:h-16  bg-blue-400/70 text-white hover:bg-blue-700 hover:text-white transform transition-all" >Edit</Button>
+                <Button className="md:w-full md:h-16  bg-blue-400/70 text-white hover:bg-blue-700 hover:text-white md:transform md:transition-all md:hover:scale-105" >
+                  
+                  <Edit  />
+                  Edit
+                  
+                  </Button>
 
                 </NavLink>
 
                 <Button  
-                onClick={() => destroy()} className="col-start-3 bg-red-400/70 text-white hover:bg-red-700 hover:text-white transform transition-all "> 
-                <DeleteIcon />
+                onClick={() => destroy()} className="col-start-3 bg-red-400/70 text-white hover:bg-red-700 hover:text-white md:transform md:transition-all md:hover:scale-105"> 
+                
+                <DeleteIcon className="animate-[wiggle_1s_ease-in-out_infinite]" />
+                
                 Delete Recipe
                 </Button>
 
@@ -195,7 +203,7 @@ function ShowRecipe(){
               <div className='mb-20 col-start-2 flex justify-center w-full' >
              <NavLink to={"/recipes"}>
 
-                <Button className="text-white w-56 h-16 bg-violet-400/70  hover:bg-violet-700"  >Back to all recipes</Button>
+                <Button className="text-white w-56 h-16 bg-violet-400/70  hover:bg-violet-700 md:transform md:transition-all md:hover:scale-105"  >Back to all recipes</Button>
   
             </NavLink>
             </div>

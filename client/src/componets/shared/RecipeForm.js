@@ -47,7 +47,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
             <TextField
                 id="outlined-textarea"
                 label="ImageURL"
-                placeholder="image url"
+                placeholder="https://media-cldnry.s"
                 multiline
                 name="image"
                 className="w-96"

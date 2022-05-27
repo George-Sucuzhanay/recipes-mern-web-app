@@ -29,7 +29,7 @@ export default function SideNav () {
     return(
         <>
         {/* MObile View */}
-        <Box className='bg-violet-700 text-white lg:hidden'>
+        <Box className='bg-violet-700 text-white lg:hidden shadow-xl shadow-zinc-500/50'>
         <StyledToolbar  > 
        
                  {/* <Toolbar variant="h6" sx={{display:{xs:"none",sm:"block"}}}> LAMA DEV </Toolbar> 

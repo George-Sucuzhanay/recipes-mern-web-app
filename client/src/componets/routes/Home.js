@@ -76,7 +76,10 @@ useEffect(()=>{
         
         <Box className="grid gap-y-4 justify-items-center mb-5">
             <div>
-                <Button onClick={handleRandom}> test random output</Button>
+                <Button     
+                 className="text-white w-56 h-16 bg-violet-400/70  hover:bg-violet-700 md:transform md:transition-all md:hover:scale-105"
+                 onClick={handleRandom}
+                 > test random output</Button>
             </div>
             <Box className={dis.recipe}>
         <div className="flex justify-center py-5 text-xl "><h1>{recipe.title}</h1></div>
