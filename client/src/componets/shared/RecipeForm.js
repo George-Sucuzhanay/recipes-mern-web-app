@@ -109,10 +109,10 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
             />
 
             <Box className="flex justify-evenly lg:col-span-2 ">
-            <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-500 item-center" type="submit">Submit</Button>
+            <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-violet-600 hover:text-zinc-100  duration-500 item-center" type="submit">Submit</Button>
 
             <Link to={cancelPath}>
-                <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-500" >Cancel</Button>
+                <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-violet-600 hover:text-zinc-100   duration-500" >Cancel</Button>
             </Link>
             </Box>
             

@@ -114,7 +114,7 @@ const display = recipes.map((recipe) => {
     return (
         <Layout>
             
-              <h1 className="flex justify-center" >Search</h1>
+              <h1 className="flex justify-center my-10 text-3xl" >Search</h1>
             <Box className="flex flex-wrap justify-center " >
           
 

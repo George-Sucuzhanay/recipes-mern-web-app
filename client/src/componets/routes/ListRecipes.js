@@ -51,7 +51,7 @@ const [isLoading,setIsLoading] = useState(true)
     return(
         <Layout>
           
-            <div className="mb-20">
+            <div className="my-10">
             <h1 className=" pt-5 text-3xl font-bold flex justify-center">My Recipes</h1>
             </div>
             

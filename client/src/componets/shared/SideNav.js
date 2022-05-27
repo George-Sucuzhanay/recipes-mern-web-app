@@ -41,7 +41,7 @@ export default function SideNav () {
                <h1 className='text-xl font-bold'>Name of app</h1>
                
 
-                 <UserBox className='lg:hidden' onClick={(e)=>setOpen(true)}>
+                 <UserBox className='lg:hidden ' onClick={(e)=>setOpen(true)}>
                  <MenuIcon size="large"/>
                 </UserBox> 
 

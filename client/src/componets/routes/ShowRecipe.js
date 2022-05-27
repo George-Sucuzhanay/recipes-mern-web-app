@@ -106,9 +106,10 @@ function ShowRecipe(){
         <Layout>
 
             <Box className="md:grid md:grid-cols-3 md:gap-y-10 mt-20">
+                <div className="flex flex-col gap-2 md:gap-0 md:flex-none md:grid md:grid-cols-2 px-3 col-span-3 mb-5 md:mb-0" >
                 <NavLink to={`/recipes/${id}/edit`} >
-
-                <Button className="md:w-full md:h-16  bg-blue-400/70 text-white hover:bg-blue-700 hover:text-white md:transform md:transition-all md:hover:scale-105" >
+                
+                <Button className=" w-full md:w-80 md:h-16  bg-blue-400/70 text-white hover:bg-blue-700 hover:text-white md:transform md:transition-all md:hover:scale-105" >
                   
                   <Edit  />
                   Edit
@@ -118,12 +119,13 @@ function ShowRecipe(){
                 </NavLink>
 
                 <Button  
-                onClick={() => destroy()} className="col-start-3 bg-red-400/70 text-white hover:bg-red-700 hover:text-white md:transform md:transition-all md:hover:scale-105"> 
+                onClick={() => destroy()} className="px-5  col-start-3  md:w-80 md:h-16 bg-red-400/70 text-white hover:bg-red-700 hover:text-white md:transform md:transition-all md:hover:scale-105"> 
                 
-                <DeleteIcon className="animate-[wiggle_1s_ease-in-out_infinite]" />
+                <DeleteIcon className="md:animate-[wiggle_1s_ease-in-out_infinite]" />
                 
                 Delete Recipe
                 </Button>
+                </div>
 
             
 
@@ -137,7 +139,7 @@ function ShowRecipe(){
                 <div className="flex justify-center items-center " >
            
            <Typography >
-               Cook Time: {recipe.cook_time}  
+               Cook Time: {recipe.cook_time}min 
            </Typography>
            </div>
            <div className="flex justify-center items-center md:col-start-3" >
@@ -146,7 +148,7 @@ function ShowRecipe(){
                
                     <div  className="flex flex-col items-center md:row-start-2 md:col-start-2">
                     <h1 className='text-3xl mb-4'>{recipe.title}</h1>
-                    <img className='w-full' src={recipe.image} alt="" width="200px"/>
+                    <img className='w-full p-5' src={recipe.image} alt="" width="200px"/>
                     </div>
 
                
@@ -200,7 +202,7 @@ function ShowRecipe(){
 
 
 
-              <div className='mb-20 col-start-2 flex justify-center w-full' >
+              <div className='mt-10 mb-20 col-start-2 flex justify-center w-full' >
              <NavLink to={"/recipes"}>
 
                 <Button className="text-white w-56 h-16 bg-violet-400/70  hover:bg-violet-700 md:transform md:transition-all md:hover:scale-105"  >Back to all recipes</Button>

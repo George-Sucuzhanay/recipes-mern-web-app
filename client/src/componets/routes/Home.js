@@ -83,7 +83,7 @@ useEffect(()=>{
             </div>
             <Box className={dis.recipe}>
         <div className="flex justify-center py-5 text-xl "><h1>{recipe.title}</h1></div>
-        <div className="px-10">
+        <div className="px-7 md:px-16">
       <img className="max-h-70" src={recipe.image} />
         </div>
 
@@ -120,7 +120,7 @@ useEffect(()=>{
 
     return(
         <Layout>
-             <div>
+             <div className="my-10">
             <h1 className=" pt-5 px-4 text-2xl font-bold flex justify-center">Get A Random Recipe Choice</h1>
             </div>
 
