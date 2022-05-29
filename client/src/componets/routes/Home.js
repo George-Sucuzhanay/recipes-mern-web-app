@@ -12,7 +12,7 @@ const [direc,setDirec] = useState([])
 const [value, setValue] = useState(0);
 const [displayed,setDisplayed] = useState({
     recipe:'hidden',
-    space:"block lg:mt-96 lg:mb-56"
+    space:"block h-screen",
 })
 
 const fetchSingleData= async (id1) => {
@@ -48,7 +48,7 @@ let handleRandom = () => {
     const index = Math.floor(Math.random() * recipes.length);
         fetchSingleData(recipes[index]._id)
         setDisplayed({
-            recipe:'block',
+            recipe:'block backdrop-blur-md',
             space:"hidden"
         })
 }
@@ -60,14 +60,14 @@ useEffect(()=>{
 
 // console.log(items)
 
- let ingredient = items.map((item) => {
+ let ingredient = items.map((item,i) => {
     return(
-        <li>{item}</li>
+        <li key={i} >{item}</li>
     )
 })
- let direction = direc.map((item) => {
+ let direction = direc.map((item,i) => {
     return(
-        <li>{item}</li>
+        <li key={i}>{item}</li>
     )
 })
 
@@ -76,12 +76,15 @@ useEffect(()=>{
         
         <Box className="grid gap-y-4 justify-items-center mb-5">
             <div>
-                <Button onClick={handleRandom}> test random output</Button>
+                <Button     
+                 className="text-white w-56 h-16 bg-violet-400/70  hover:bg-violet-700 md:transform md:transition-all md:hover:scale-105"
+                 onClick={handleRandom}
+                 > test random output</Button>
             </div>
             <Box className={dis.recipe}>
         <div className="flex justify-center py-5 text-xl "><h1>{recipe.title}</h1></div>
-        <div className="px-10">
-      <img className="h-56px" src={recipe.image} alt="" />
+        <div className="px-7 md:px-16">
+      <img className="max-h-70" src={recipe.image} />
         </div>
 
         <div className="flex justify-evenly pt-4 ">
@@ -90,7 +93,7 @@ useEffect(()=>{
           
           
         </div>
-            <div className="divide-y divide-blue-600 ">
+            <div className="divide-y divide-zinc-100 ">
             <div > 
                  <div className=" flex justify-center pt-3">
                        <h1 className="text-xl font-bold">Ingredients:</h1>
@@ -117,7 +120,7 @@ useEffect(()=>{
 
     return(
         <Layout>
-             <div>
+             <div className="my-10">
             <h1 className=" pt-5 px-4 text-2xl font-bold flex justify-center">Get A Random Recipe Choice</h1>
             </div>
 
