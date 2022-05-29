@@ -44,6 +44,7 @@ function ShowRecipe(){
     const [deleted, setDeleted] = useState(false)
     const [items,setItems] = useState([])
     const [direc,setDirec] = useState([])
+    const [value, setValue] = useState(0);
     const { id } = useParams();
     let navigate = useNavigate();
 
@@ -56,6 +57,7 @@ function ShowRecipe(){
             setRecipe(result)
             setItems(result.ingredients)
             setDirec(result.directions)
+            setValue(result.Rating)
           
           } catch (error) {
             console.error(error)
@@ -143,7 +145,7 @@ function ShowRecipe(){
            </Typography>
            </div>
            <div className="flex justify-center items-center md:col-start-3" >
-                <Typography alignItems="center" className="flex" component="legend"> Rating: <Rating name="read-only" value={recipe.rating} readOnly  /> </Typography>
+                <Typography alignItems="center" className="flex" component="legend"> Rating: <Rating name="read-only" value={value} readOnly  /> </Typography>
                 </div>
                
                     <div  className="flex flex-col items-center md:row-start-2 md:col-start-2">
@@ -175,30 +177,6 @@ function ShowRecipe(){
                 </ul>
                 </div>
         
-
-
-        {/* testing tables with material UI */}
-{/* 
-        <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-            
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {items.map((item, index) => (
-            <StyledTableRow key={index}>
-              <StyledTableCell component="th" scope="item">
-                {item}
-              </StyledTableCell>
-              
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer> */}
 
 
 
