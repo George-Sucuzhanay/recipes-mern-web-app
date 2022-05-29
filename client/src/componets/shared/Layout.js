@@ -8,7 +8,7 @@ export default function Layout (props) {
         <>
     { /* desktop view */}
      
-        <Box className="hidden lg:block text-white" 
+        <Box className="hidden lg:block text-white"
         style={{
             position: 'fixed', 
             top:'0',
@@ -37,7 +37,7 @@ export default function Layout (props) {
     </Box>
 
     {/* mobile view   */}
-        <Box className=" lg:hidden text-white"
+        <Box className=" lg:hidden text-white "
          style={{
             position: 'fixed', 
             top:'0',
