@@ -31,14 +31,10 @@ export default function SideNav () {
         {/* MObile View */}
         <Box className='bg-violet-700 text-white lg:hidden shadow-xl shadow-zinc-500/50'>
         <StyledToolbar  > 
-       
-                 {/* <Toolbar variant="h6" sx={{display:{xs:"none",sm:"block"}}}> LAMA DEV </Toolbar> 
-                <MenuBookRounde sx={{display:{sm:"block",md:"none"}}}/> */}
-                {/* <Search style={{border:"1px solid black"}}> <InputBase placeholder="search" />    </Search> */}
                 
                   
                    
-               <h1 className='text-xl font-bold'>Name of app</h1>
+               <h1 className='text-xl font-bold'>Cooking vault</h1>
                
 
                  <UserBox className='lg:hidden ' onClick={(e)=>setOpen(true)}>
@@ -77,7 +73,7 @@ export default function SideNav () {
             <Box position="fixed">
                 <div className='grid mb-10 justify-center'>
                     
-                    <h1 className=' text-3xl font-bold flex justify-center pt-5'>Name of App</h1>
+                    <h1 className=' text-3xl font-bold flex justify-center pt-5'>Cooking Vault</h1>
                     <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
                 </div>
                 

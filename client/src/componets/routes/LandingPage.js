@@ -26,11 +26,11 @@ export default function LandingPage() {
           <div className="flex justify-center items-center flex-col">
             <div className=" flex flex-wrap justify-center  lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-center text-gray-800 dark:text-white ">
             <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
-              <h1 className='flex items-center px-2'>Tailor-made features</h1>
+              <h1 className='flex items-center px-2'>Cooking Vault</h1>
             </div>
             <div className='pb-20'>
-            <Typography variant="body2"className='flex text-white font-semibold italic'>
-               Archive Your Cooking Adventure</Typography>
+            <Typography variant="body2"className='flex text-white font-semibold italic pt-2'>
+               Archive Your Cooking Adventures</Typography>
             </div>
 
             <div className="grid lg:grid-cols-2 md:grid-cols-2 justify-center items-center xl:gap-y-16 gap-y-20 gap-x-16 lg:gap-x-20 xl:gap-x-0 lg:px-10 xl:px-0 divide-y md:divide-y-0  pt-0 backdrop-blur-sm">
