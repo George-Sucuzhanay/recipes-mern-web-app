@@ -2,6 +2,7 @@ const moongoose = require("mongoose")
 const express = require("express")
 const { default: mongoose } = require("mongoose")
 
+require("dotenv").config()
 let MONGODB_URL = process.env.PROD_MONGODB || process.env.MONGODB_URL || "mongodb://127.0.0.1:27017/recipieDB"
 
 
