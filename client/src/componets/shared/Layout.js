@@ -8,7 +8,7 @@ export default function Layout (props) {
         <>
     { /* desktop view */}
      
-        <Box className="hidden lg:block text-white " 
+        <Box className="hidden lg:block text-white"
         style={{
             position: 'fixed', 
             top:'0',
@@ -25,30 +25,30 @@ export default function Layout (props) {
        
         <SideNav />
           
-        <RouteView className="hidden lg:block ">
+        <RouteView className="hidden lg:block">
             {props.children}
         </RouteView>
         
         </Stack>
         
 
-        <Footer />
+        <Footer  />
         
     </Box>
 
     {/* mobile view   */}
-        <Box className=" lg:hidden "
-        //  style={{
-        //     position: 'fixed', 
-        //     top:'0',
-        //     right:'0',
-        //     left:'0',
-        //     bottom:'0',
-        //     overflow: 'auto',  
-        //     flexDirection: 'row',
-        //     backgroundImage:' url("https://i.postimg.cc/PJJWYvtH/Screen-Shot-2022-05-25-at-10-33-33-PM.png")',
-        //     backgroundSize:'cover'
-        //   }}
+        <Box className=" lg:hidden text-white "
+         style={{
+            position: 'fixed', 
+            top:'0',
+            right:'0',
+            left:'0',
+            bottom:'0',
+            overflow: 'auto',  
+            flexDirection: 'row',
+            backgroundImage:' url("https://i.postimg.cc/PJJWYvtH/Screen-Shot-2022-05-25-at-10-33-33-PM.png")',
+            backgroundSize:'cover'
+          }}
         >
         
        

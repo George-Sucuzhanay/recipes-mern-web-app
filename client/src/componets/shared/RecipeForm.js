@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 px-10 mb-10">
+        <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 p-10 mb-10 lg:mb-28 backdrop-blur-xl bg-zinc-200/70 mt-10 ">
 
-         
+
              <TextField
                 id="outlined-textarea"
                 label="Title"
@@ -36,7 +36,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
             <TextField
                 id="outlined-textarea"
                 label="ImageURL"
-                placeholder="image url"
+                placeholder="https://media-cldnry.s"
                 multiline
                 name="image"
                 className="w-96"
@@ -45,12 +45,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 variant="filled"
             />
 
-            {/* <label>Rating: </label>
-            <input
-            placeholder="5"
-            defaultValue={recipe.Rating}
-            name="Rating"
-            onChange={(e) => handleChange(e)} /> */}
+
              <TextField
                 id="outlined-textarea"
                 label="Rating"
@@ -82,16 +77,16 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 placeholder="Directions"
                 multiline
                 name="directions"
-                className="w-96 caret-cyan-400"
+                className="w-96"
                 defaultValue={recipe.directions}
                 onChange={(e) => handleChange(e)}
             />
 
-            <Box className="flex justify-evenly lg:col-span-2">
-            <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-700 item-center" type="submit">Submit</Button>
+            <Box className="flex justify-evenly lg:col-span-2 ">
+            <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-violet-600 hover:text-zinc-100  duration-500 item-center" type="submit">Submit</Button>
 
             <Link to={cancelPath}>
-                <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-cyan-400  duration-700" >Cancel</Button>
+                <Button variant="outlined" className="px-14 py-3 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-violet-600 hover:text-zinc-100   duration-500" >Cancel</Button>
             </Link>
             </Box>
             
