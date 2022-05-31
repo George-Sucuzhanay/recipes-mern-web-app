@@ -31,10 +31,6 @@ export default function SideNav () {
         {/* MObile View */}
         <Box className='bg-violet-700 text-white lg:hidden shadow-xl shadow-zinc-500/50'>
         <StyledToolbar  > 
-       
-                 {/* <Toolbar variant="h6" sx={{display:{xs:"none",sm:"block"}}}> LAMA DEV </Toolbar> 
-                <MenuBookRounde sx={{display:{sm:"block",md:"none"}}}/> */}
-                {/* <Search style={{border:"1px solid black"}}> <InputBase placeholder="search" />    </Search> */}
                 
                   
                    
