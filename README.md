@@ -47,16 +47,21 @@ Routes:
   src/
     components/
         routes/
-            Recipe.js
-            RecipeCreate.js
-            RecipeEdit.js
-            Recipes.js
+            ShowRecipe.js
+            CreateRecipe.js
+            EditRecipe.js
+            ListRecipes.js
             Home.js
+            LandPage.js
+            Search.js
         shared/
             RecipeForm.js
             Footer.js
             Layout.js
-            Nav.js
+            Loading.js
+            RecipeCard.js
+            RouteView.js
+            SideNav.js
     ...
 ```
 ## 📦 List Dependencies 
@@ -76,6 +81,6 @@ Backend:
 
 
 ## 👨‍💻 Authors
-* Amar Moorer
-* George Sucuzhanay
-* Braun Payne
+* [Amar Moorer](https://github.com/Amoorer75)
+* [George Sucuzhanay](https://github.com/George-Sucuzhanay)
+* [Braun Payne](https://github.com/qu3stion)
