@@ -8,8 +8,10 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
     return (
         <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 p-10 mb-10 lg:mb-28 backdrop-blur-xl bg-zinc-200/70 mt-10 ">
 
+
          
             <TextField
+
                 id="outlined-textarea"
                 label="Title"
                 placeholder="Smashed Potatoes"
@@ -21,7 +23,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 variant="filled"
             />
 
-        
+
              <TextField
                 id="outlined-textarea"
                 label="Cook Time"
@@ -46,6 +48,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 variant="filled"
             />
 
+
              <TextField
                 id="outlined-textarea"
                 label="Rating"
@@ -58,6 +61,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 variant="filled"
             />
 
+
              <TextField
                 id="outlined-textarea"
                 label="Ingredients"
@@ -68,6 +72,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 defaultValue={recipe.ingredients}
                 onChange={(e) => handleChange(e)}
             />
+
 
              <TextField
                 id="outlined-textarea"
