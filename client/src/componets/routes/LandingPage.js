@@ -24,7 +24,7 @@ export default function LandingPage() {
         >
         <section className="mx-auto container py-9 ">
           <div className="flex justify-center items-center flex-col">
-            <div className=" flex flex-wrap justify-center  lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-center text-gray-800 dark:text-white ">
+            <div className=" flex flex-wrap justify-center  lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-center text-white ">
             <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
               <h1 className='flex items-center px-2'>Cooking Vault</h1>
             </div>
