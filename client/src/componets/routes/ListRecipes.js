@@ -44,7 +44,7 @@ const [recipes, setRecipes] = useState([])
     return(
         <Layout>
             <div className="mb-20">
-            <h1 className=" pt-5 text-3xl font-bold flex justify-center">show all recipes</h1>
+            <h1 className=" pt-5 text-3xl font-bold flex justify-center">My Recipes</h1>
             </div>
             
             <Box className="flex flex-wrap justify-center gap-4 mb-10 ">
