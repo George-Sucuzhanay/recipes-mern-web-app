@@ -3,39 +3,10 @@ import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Layout from '../shared/Layout'
 import { Button } from '@mui/material';
-import { Stack } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { styled } from '@mui/material/styles';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';  
 import { Rating, Box, Grid } from '@mui/material';
 import { Typography, CardActionArea} from '@mui/material';
 import { Edit } from '@mui/icons-material';
-
-// const StyledTableCell = styled(TableCell)(({ theme }) => ({
-//   [`&.${tableCellClasses.head}`]: {
-//     backgroundColor: theme.palette.common.black,
-//     color: theme.palette.common.white,
-//   },
-//   [`&.${tableCellClasses.body}`]: {
-//     fontSize: 14,
-//   },
-// }));
-
-// const StyledTableRow = styled(TableRow)(({ theme }) => ({
-//   '&:nth-of-type(odd)': {
-//     backgroundColor: theme.palette.action.hover,
-//   },
-//   // hide last border
-//   '&:last-child td, &:last-child th': {
-//     border: 0,
-//   },
-// }));
 
 
 
@@ -98,8 +69,6 @@ function ShowRecipe(){
             <li key={i}>{item}</li>
         )
     })
-
-    //   console.log(recipe.ingredients)
 
       
       
