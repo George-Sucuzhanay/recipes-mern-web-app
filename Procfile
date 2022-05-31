@@ -1,1 +1,1 @@
-web node server.js && cd client && react-scripts start
+web node server.js && web  cd client && react-scripts start
