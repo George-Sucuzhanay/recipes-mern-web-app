@@ -1,6 +1,7 @@
 const moongoose = require("mongoose")
 const express = require("express")
 const path = require("path")
+const app = express()
 
 const { default: mongoose } = require("mongoose")
 
