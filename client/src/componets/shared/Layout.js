@@ -52,7 +52,7 @@ export default function Layout (props) {
         >
         
        
-        <SideNav />
+        <SideNav className=""/>
           
         
             {props.children}
