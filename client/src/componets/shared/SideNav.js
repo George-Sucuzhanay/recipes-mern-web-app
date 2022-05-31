@@ -78,7 +78,7 @@ export default function SideNav () {
                 <div className='grid mb-10 justify-center'>
                     
                     <h1 className=' text-3xl font-bold flex justify-center pt-5'>Name of App</h1>
-                    <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
+                    <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png'  alt=""/>
                 </div>
                 
                

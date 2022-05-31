@@ -84,7 +84,7 @@ useEffect(()=>{
             <Box className={dis.recipe}>
         <div className="flex justify-center py-5 text-xl "><h1>{recipe.title}</h1></div>
         <div className="px-7 md:px-16">
-      <img className="max-h-70" src={recipe.image} />
+      <img className="max-h-70" src={recipe.image}  alt=""/>
         </div>
 
         <div className="flex justify-evenly pt-4 ">

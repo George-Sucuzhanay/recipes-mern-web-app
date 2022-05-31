@@ -8,7 +8,7 @@ export default function Footer () {
             <div className=" bg-violet-700  ">
                 <div className="mx-auto container pt-5 lg:pt-2 flex flex-col items-center justify-center">
                     <div className="lg:hidden" >
-                        <img className='max-h-28' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
+                        <img className='max-h-28' src='https://i.postimg.cc/XJQCw3Wn/logo.png' alt=""/>
                     </div>
                     <div className="text-white flex flex-col md:items-center f-f-l pt-3 ">
                         <h1 className="text-2xl font-black flex justify-center">Get Cooking!</h1>

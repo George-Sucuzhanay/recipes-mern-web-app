@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardContent, CardMedia, Typography, Rating, Skeleton } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia, Typography, Rating} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Pic , H1 , CookTime , Rate } from "./Loading";
 
