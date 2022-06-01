@@ -6,7 +6,6 @@ import SideNav from "./SideNav";
 export default function Layout (props) {
     return(
         <>
-    { /* desktop view */}
      
         <Box className="hidden lg:block text-white"
         style={{

@@ -72,7 +72,6 @@ function ShowRecipe(){
 
       
       
-      console.log(items)
       return (
         <Layout>
 

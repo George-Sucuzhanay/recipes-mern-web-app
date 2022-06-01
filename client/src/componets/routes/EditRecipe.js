@@ -20,6 +20,7 @@ function EditRecipe(){
     useEffect(() => {
         const fetchData = async () => {
         try {
+            // eslint-disable-next-line
             const response = await axios({
                 url:`${process.env.REACT_APP_API_URL}/api/recipes/${id}`,
                 method: "GET",
