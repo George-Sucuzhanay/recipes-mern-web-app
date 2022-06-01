@@ -4,11 +4,10 @@ import axios from 'axios';
 import Layout from '../shared/Layout'
 import { Button } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Rating, Box, Grid } from '@mui/material';
-import { Typography, CardActionArea} from '@mui/material';
+
+import { Rating, Box} from '@mui/material';
+import { Typography} from '@mui/material';
 import { Edit } from '@mui/icons-material';
-
-
 
 function ShowRecipe(){
     const [recipe, setRecipe] = useState([])
@@ -70,9 +69,7 @@ function ShowRecipe(){
         )
     })
 
-      
-      
-      console.log(items)
+
       return (
         <Layout>
 
