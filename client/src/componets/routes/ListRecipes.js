@@ -5,23 +5,14 @@ import axios from 'axios';
 import RecipeCard from "../shared/RecipeCard";
 export default function ListRecipes (){
   
-//pass the results of the array it RecipeCard
-//go to RecipeCard to see what to name the props
-//example would be name={something} 
 
 const [recipes, setRecipes] = useState([])
 const [isLoading,setIsLoading] = useState(true)
 
  
-// axios({
-//   url: `${process.env.REACT_APP_API_URL}/api/recipes`,
-//   method: 'POST',
-//   data: recipe
-// }).then(res => setCreateRecipe(res.data.recipe)).catch(console.error)
 
   const fetchData = async () => {
     try {
-      // const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes`, { headers: {'Access-Control-Allow-Origin': '*'}})
       // eslint-disable-next-line
       const response = await axios({
         url: `${process.env.REACT_APP_API_URL}/api/recipes`,

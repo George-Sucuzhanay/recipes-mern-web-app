@@ -32,9 +32,7 @@ export default function SideNav () {
         <Box className='bg-violet-700 text-white lg:hidden shadow-xl shadow-zinc-500/50'>
         <StyledToolbar  > 
        
-                 {/* <Toolbar variant="h6" sx={{display:{xs:"none",sm:"block"}}}> LAMA DEV </Toolbar> 
-                <MenuBookRounde sx={{display:{sm:"block",md:"none"}}}/> */}
-                {/* <Search style={{border:"1px solid black"}}> <InputBase placeholder="search" />    </Search> */}
+                
                 
                   
                    
@@ -77,7 +75,7 @@ export default function SideNav () {
             <Box position="fixed">
                 <div className='grid mb-10 justify-center'>
                     
-                    <h1 className=' text-3xl font-bold flex justify-center pt-5'>Name of App</h1>
+                    <h1 className=' text-3xl font-bold flex justify-center pt-5'>Recipe Vault</h1>
                     <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png'  alt=""/>
                 </div>
                 
@@ -136,13 +134,7 @@ export default function SideNav () {
                     </NavLink>
                 </ListItem>
               
-                
-                {/* <ListItem disablePadding>
-                    <ListItemButton componet='a' href='#home'>
-                    
-                    <Switch onChange={e=>setMode(mode === 'light' ? 'dark':'light' )}/>
-                    </ListItemButton>
-                </ListItem> */}
+        
             </List>
             </Box>
         </Box>

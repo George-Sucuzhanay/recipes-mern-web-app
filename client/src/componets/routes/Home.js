@@ -19,10 +19,6 @@ const fetchSingleData= async (id1) => {
     try {
         const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes/${id1}`)
  
-        console.log(response.data.recipe)
-
-
-
         setRecipe(response.data.recipe)
         setItems(response.data.recipe.ingredients)
         setDirec(response.data.recipe.directions)
@@ -36,7 +32,6 @@ const fetchSingleData= async (id1) => {
 const fetchData= async () => {
     try {
         const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes`)
-        console.log(response.data.recipes)
         setRecipes(response.data.recipes)
     }catch (err) {
         console.error(err)

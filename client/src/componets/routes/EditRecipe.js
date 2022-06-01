@@ -7,7 +7,7 @@ import RecipeForm from "../shared/RecipeForm";
 
 function EditRecipe(){
     const navigate = useNavigate()
-    const { id } = useParams()  //get the id from the current object to update
+    const { id } = useParams()  
     const [recipe, setRecipe] = useState({
         title: '',
         ingredients: [''],
@@ -35,12 +35,10 @@ function EditRecipe(){
       }
       fetchData()
     }, [id])
+    
     const handleChange = (event) => {
-        //created a placeholder grabbing the value from the user input form
-        // const updatedField = { [event.target.name] : event.target.value }
-        //assigned the empty state with the updatedField into one object
+       
         const editedRecipe = { ...recipe, [event.target.name]: event.target.value}
-        //assigned the new object to be updated to the state
         setRecipe(editedRecipe)
     }
     const handleSubmit = (event) => {

@@ -17,11 +17,8 @@ function CreateRecipe() {
   const [createRecipe, setCreateRecipe] = useState(null)
 
   const handleChange = (event) => {
-    //created a placeholder grabbing the value from the user input form
     const updatedField = { [event.target.name] : event.target.value }
-    //assigned the empty state with the updatedField into one object
     const editedRecipe = Object.assign(recipe, updatedField)
-    //assigned the new object to be updated to the state
     setRecipe(editedRecipe)
   }
   
