@@ -1,9 +1,9 @@
 <img src="./client/src/assets/logo.png" width= 100px>
 
 
-# 🧑‍🍳 Recipe CRUD App 🧑‍🍳
+# 🧑‍🍳 Cooking Vault App 🧑‍🍳
 
-XYZ is a intuitive web application that organizes your favorite recipes. You can view, delete, edit and create entirely new recipes that satisfy your taste buds. The goal is to have a personalized recipes at the touch of a button. Our app offers step-by-step instructions of your favorite recipes, ingredients, images, rating and cook time.
+The Cooking Vault is a intuitive web application that organizes your favorite recipes. You can view, delete, edit and create entirely new recipes that satisfy your taste buds. The goal is to have a personalized recipes at the touch of a button. Our app offers step-by-step instructions of your favorite recipes, ingredients, images, rating and cook time.
 
 ## 👩🏽‍🚀 Feature List:
 * Create new recipes items to your list
