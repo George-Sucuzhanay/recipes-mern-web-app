@@ -18,7 +18,8 @@ export default function Search () {
   useEffect(() => {
     const fetchData = async () => {
         try {
-          const response = await axios('http://localhost:3000/api/recipes')
+            
+          const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes`)
           setRecipes(response.data.recipes)
     
         } catch (error) {

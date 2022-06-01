@@ -17,7 +17,7 @@ const [displayed,setDisplayed] = useState({
 
 const fetchSingleData= async (id1) => {
     try {
-        const response = await axios(`http://localhost:3000/api/recipes/${id1}`)
+        const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes/${id1}`)
  
         console.log(response.data.recipe)
 
@@ -35,7 +35,7 @@ const fetchSingleData= async (id1) => {
 
 const fetchData= async () => {
     try {
-        const response = await axios(`http://localhost:3000/api/recipes`)
+        const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes`)
         console.log(response.data.recipes)
         setRecipes(response.data.recipes)
     }catch (err) {
