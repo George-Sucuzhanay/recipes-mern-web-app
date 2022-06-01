@@ -28,11 +28,8 @@ function CreateRecipe() {
   
   const handleSubmit = (event) => {
     event.preventDefault()
-
-    //if the entry is created in the database, save the response data
-    // in the state
     axios({
-      url: `http://localhost:3000/api/recipes`,
+      url: `${process.env.REACT_APP_API_URL}/api/recipes`,
       method: 'POST',
       data: recipe
     }).then(res => setCreateRecipe(res.data.recipe)).catch(console.error)

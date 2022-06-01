@@ -5,7 +5,7 @@ import ListRecipes from "./componets/routes/ListRecipes";
 import CreateRecipe from "./componets/routes/CreateRecipe";
 import EditRecipe from "./componets/routes/EditRecipe";
 import Search from './componets/routes/Search';
-import LandingPage from './componets/routes/LandingPage';
+import LandingPage from './componets/routes/LandingPage'
 
 
 function App() {

@@ -21,7 +21,7 @@ function ShowRecipe(){
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios(`http://localhost:3000/api/recipes/${id}`)
+            const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes/${id}`)
     
             const result = response.data.recipe
             setRecipe(result)
@@ -44,7 +44,7 @@ function ShowRecipe(){
     
       const destroy = () => {
        axios({
-          url: `http://localhost:3000/api/recipes/${id}`,
+          url: `${process.env.REACT_APP_API_URL}/api/recipes/${id}`,
           method: 'DELETE'
         }).then(() => setDeleted(true)).catch(console.error)
       }
