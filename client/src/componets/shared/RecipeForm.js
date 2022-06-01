@@ -56,7 +56,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 onChange={(e) => handleChange(e)}
                 variant="filled"
             />
-hange={(e) => handleChange(e)} /> */}
+
              <TextField
                 id="outlined-textarea"
                 label="Ingredients"
