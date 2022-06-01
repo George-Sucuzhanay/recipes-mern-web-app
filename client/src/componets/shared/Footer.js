@@ -3,12 +3,11 @@ import { NavLink } from "react-router-dom";
 export default function Footer () {
     return (
         <footer className="h-10 bottom-0 bg-violet-700 ">
-        {/* <p className="flex justify-center py-10 bg-violet-700 text-white">© Copyright {new Date().getFullYear()}. All Rights Reserved.</p> */}
         <>
             <div className=" bg-violet-700  ">
                 <div className="mx-auto container pt-5 lg:pt-2 flex flex-col items-center justify-center">
                     <div className="lg:hidden" >
-                        <img className='max-h-28' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
+                        <img className='max-h-28' src='https://i.postimg.cc/XJQCw3Wn/logo.png' alt=""/>
                     </div>
                     <div className="text-white flex flex-col md:items-center f-f-l pt-3 ">
                         <h1 className="text-2xl font-black flex justify-center">Get Cooking!</h1>

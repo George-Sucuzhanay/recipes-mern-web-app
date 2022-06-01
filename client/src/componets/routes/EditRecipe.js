@@ -20,9 +20,15 @@ function EditRecipe(){
     useEffect(() => {
         const fetchData = async () => {
         try {
-            const response = await axios(`http://localhost:3000/api/recipes/${id}`)
-            console.log(response)
-            setRecipe(response.data.recipe)
+            // eslint-disable-next-line
+            const response = await axios({
+                url:`${process.env.REACT_APP_API_URL}/api/recipes/${id}`,
+                method: "GET",
+                headers: {'Access-Control-Allow-Origin': '*'}
+                
+            })
+            .then(response => setRecipe(response.data.recipe))
+    
         } catch (error) {
             console.log(error)
         }
@@ -40,9 +46,10 @@ function EditRecipe(){
     const handleSubmit = (event) => {
         event.preventDefault()
          axios({
-             url: `http://localhost:3000/api/recipes/${id}`,
+             url: `${process.env.REACT_APP_API_URL}/api/recipes/${id}`,
              method: 'PUT',
-             data: recipe
+             data: recipe,
+             headers: {'Access-Control-Allow-Origin': '*'}
          }).then(() => setUpdated(true)).catch(console.error)
     }
     useEffect(() => {

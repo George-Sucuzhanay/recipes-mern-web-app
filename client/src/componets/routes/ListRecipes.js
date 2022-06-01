@@ -3,7 +3,6 @@ import Layout from "../shared/Layout";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import RecipeCard from "../shared/RecipeCard";
-
 export default function ListRecipes (){
   
 //pass the results of the array it RecipeCard
@@ -13,13 +12,27 @@ export default function ListRecipes (){
 const [recipes, setRecipes] = useState([])
 const [isLoading,setIsLoading] = useState(true)
 
+ 
+// axios({
+//   url: `${process.env.REACT_APP_API_URL}/api/recipes`,
+//   method: 'POST',
+//   data: recipe
+// }).then(res => setCreateRecipe(res.data.recipe)).catch(console.error)
+
   const fetchData = async () => {
     try {
-      const response = await axios('http://localhost:3000/api/recipes')
-      setRecipes(response.data.recipes)
-      setTimeout(() => {
+      // const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes`, { headers: {'Access-Control-Allow-Origin': '*'}})
+      // eslint-disable-next-line
+      const response = await axios({
+        url: `${process.env.REACT_APP_API_URL}/api/recipes`,
+        method: 'GET',
+        headers: {'Access-Control-Allow-Origin': '*'}
+      })
+      .then(response => setRecipes(response.data.recipes) )
+      .then(setTimeout(() => {
         setIsLoading(false)
-      }, 3000);
+      }, 3000))
+
 
     } catch (error) {
       console.error(error)

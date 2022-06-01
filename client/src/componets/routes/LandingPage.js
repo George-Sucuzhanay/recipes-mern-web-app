@@ -1,6 +1,5 @@
-import { AddCircle, AddCircleOutline, AddCircleOutlined, HelpOutlineTwoTone, MenuBook, QuestionMark, Search } from "@mui/icons-material"
+import { AddCircleOutline, MenuBook, QuestionMark, Search } from "@mui/icons-material"
 import { Typography } from "@mui/material"
-import { useEffect } from "react"
 import { NavLink, } from "react-router-dom"
 
 
@@ -25,8 +24,10 @@ export default function LandingPage() {
         <section className="mx-auto container py-9 ">
           <div className="flex justify-center items-center flex-col">
             <div className=" flex flex-wrap justify-center  lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-center text-gray-800 dark:text-white ">
+
             <img className='max-h-40' src='https://i.postimg.cc/XJQCw3Wn/logo.png' />
               <h1 className='flex items-center px-2'>Recipe Vault</h1>
+
             </div>
             <div className='pb-20'>
             <Typography variant="body2"className='flex text-white font-semibold italic'>

@@ -1,4 +1,4 @@
-import { Box, TextField , Button , Rating, Typography  } from "@mui/material";
+import { Box, TextField , Rating, Typography  } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Layout from "../shared/Layout";
@@ -18,7 +18,8 @@ export default function Search () {
   useEffect(() => {
     const fetchData = async () => {
         try {
-          const response = await axios('http://localhost:3000/api/recipes')
+            
+          const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes`)
           setRecipes(response.data.recipes)
     
         } catch (error) {
@@ -55,6 +56,7 @@ onsubmit = () => {
 }
 
 //the 
+// eslint-disable-next-line
 const display = recipes.map((recipe) => {
    
     if (text === recipe.title){
@@ -76,7 +78,7 @@ const display = recipes.map((recipe) => {
             <Box >
         <div className="flex justify-center py-5 text-xl "><h1>{recipe.title}</h1></div>
         <div className="px-10 flex justify-center">
-      <img className="w-lg " src={recipe.image} />
+      <img className="w-lg " src={recipe.image} alt=""/>
         </div>
 
         <div className="flex justify-evenly pt-4 ">
