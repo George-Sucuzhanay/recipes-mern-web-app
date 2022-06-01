@@ -38,7 +38,7 @@ export default function SideNav () {
                 
                   
                    
-               <h1 className='text-xl font-bold'>Name of app</h1>
+               <h1 className='text-xl font-bold'>Recipe Vault</h1>
                
 
                  <UserBox className='lg:hidden ' onClick={(e)=>setOpen(true)}>
