@@ -7,12 +7,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
     return (
         <form onSubmit={(e) => handleSubmit(e)} className="grid justify-center lg:grid-cols-2 gap-y-10 gap-x-5 p-10 mb-10 lg:mb-28 backdrop-blur-xl bg-zinc-200/70 mt-10 ">
 
-            {/* <label>Title: </label>
-            <input
-            placeholder="Smashed Potatoes"
-            defaultValue={recipe.title}
-            name="title"
-            onChange={(e) => handleChange(e)} /> */}
+           
             <TextField
                 id="outlined-textarea"
                 label="Title"
@@ -25,12 +20,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 variant="filled"
             />
 
-            {/* <label>Cook Time: </label>
-            <input
-            placeholder="30 mins"
-            defaultValue={recipe.cook_time}
-            name="cook_time"
-            onChange={(e) => handleChange(e)} /> */}
+           
              <TextField
                 id="outlined-textarea"
                 label="Cook Time"
@@ -55,12 +45,6 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 variant="filled"
             />
 
-            {/* <label>Rating: </label>
-            <input
-            placeholder="5"
-            defaultValue={recipe.Rating}
-            name="Rating"
-            onChange={(e) => handleChange(e)} /> */}
              <TextField
                 id="outlined-textarea"
                 label="Rating"
@@ -72,13 +56,7 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 onChange={(e) => handleChange(e)}
                 variant="filled"
             />
-
-            {/* <label>Ingredients: </label>
-            <input
-            placeholder="Ingredients"
-            defaultValue={recipe.ingredients}
-            name="ingredients"
-            onChange={(e) => handleChange(e)} /> */}
+hange={(e) => handleChange(e)} /> */}
              <TextField
                 id="outlined-textarea"
                 label="Ingredients"
@@ -90,12 +68,6 @@ const RecipeForm = ({recipe, handleChange, handleSubmit, cancelPath}) => {
                 onChange={(e) => handleChange(e)}
             />
 
-            {/* <label>Directions: </label>
-            <input
-            placeholder="Directions"
-            defaultValue={recipe.directions}
-            name="directions"
-            onChange={(e) => handleChange(e)} /> */}
              <TextField
                 id="outlined-textarea"
                 label="Directions"
