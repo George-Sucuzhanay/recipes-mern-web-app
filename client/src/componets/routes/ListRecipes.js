@@ -22,7 +22,7 @@ const [isLoading,setIsLoading] = useState(true)
   const fetchData = async () => {
     try {
       // const response = await axios(`${process.env.REACT_APP_API_URL}/api/recipes`, { headers: {'Access-Control-Allow-Origin': '*'}})
-      
+      // eslint-disable-next-line
       const response = await axios({
         url: `${process.env.REACT_APP_API_URL}/api/recipes`,
         method: 'GET',
